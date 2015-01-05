@@ -7,58 +7,63 @@
 	<meta charset="UTF-8"/>
 </head>
 <body>
-<button class="a-menu"><div class="menu"></div></button>
-<nav class="menu-1">
-	<ul>
-		<li>TEXT 1</li>
-		<li>TEXT 2</li>
-		<li>TEXT 3</li>
-		<li>TEXT 4</li>
-		<li>TEXT 5</li>
-		<li>TEXT 6</li>
-	</ul>
-</nav>
-<button class="f"></button>
-<div class="bck-1"></div>
-<div class="bck-2"></div>
-<button id="bck">Change background</button>
-<div class="container-1" id="change"><a href="#">More</a></div>
+<header>
+	<h1>Librairie d'Animations</h1>
+</header>
+<main>
+	<section>
+		<p class="float">Menu burger avec transition en Css3</p>
+		<section class="content-anim">
+	<a class="a-menu"><div class="menu"></div></a>
+		</section>
+	</section>
+
+	<section>
+		<p class="float">Menu caché développé pour menu principal (burger)</p>
+		<section class="content-anim">
+			<nav class="menu-1">
+			<ul>
+				<li>TEXT 1</li>
+				<li>TEXT 2</li>
+				<li>TEXT 3</li>
+				<li>TEXT 4</li>
+				<li>TEXT 5</li>
+				<li>TEXT 6</li>
+			</ul>
+		</nav>
+		</section>
+	</section>
+
+	<section>
+		<p class="float">Menu en position fixed qui permet à l'utilisateur d'avoir un menu à porter de main.</p>
+		<section class="content-anim">
+			<nav>
+<ul class="more">
+	<li class="more-li"><a></a></li>
+	<li class="more-li"><a></a></li>
+	<li class="more-li"><a></a></li>
+</ul>
+		</nav>
+		</section>
+	</section>
+
+	<section>
+		<p class="float">Slide qui permet de supprimer un élément hors d'une liste. Le swipe sera mis en place pour cette animation.</p>
+		<section class="content-anim">
+		<p class="field">Click this box!</p>
+		</section>
+	</section>
+
+
+	<section>
+		<p class="float">Cette animation permet d'afficher du contenu caché (ex:filtres) à partir d'un bouton.</p>
+		<section class="content-anim">
+			<div class="content"><p></p></div>
+			<button id="show-content">Here to show content</button>
+		</section>
+	</section>
+</main>
 <script src="js/jquery-2.1.3.min.js"></script>
-<script>
-$(document).ready(function(){
-	var test= "";
-
-	$('.a-menu').on('click', function(){
-	$(this).toggleClass('menu-open');
-	$('.menu-1').toggleClass('menu-on-1');
-	});
-
-	$('#change').on('click', function(){
-	$('.container-1').toggleClass('change');
-	});
-
-	$('#bck').on('click', function(){
-	if(test == "")
-	{
-		$('.bck-1').css('transform','translate(-100%,0)');
-		$('.bck-2').css('transform','translate(0%,0)');
-	}
-
-	else
-	{
-		$('.bck-1').css('transform','translate(0,0)');
-		$('.bck-2').css('transform','translate(100%,0)');
-	}
-	test = !test;
-	});
-
-	$('.f').on('click', function(){
-	$(this).toggleClass('f-on');
-	});
-
-
-
-});
-</script>
+<script src="js/jquery.js"></script>
 </body>
 </html>

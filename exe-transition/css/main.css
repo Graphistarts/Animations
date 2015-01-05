@@ -1,5 +1,36 @@
+/* Animations Kévin Kévers */
 body{
 	background: white;
+}
+
+header{
+	height: 250px;
+	background: #bada55;
+	width: 100%;
+	line-height: 250px;
+	text-align: center;
+}
+
+main{
+	width: 700px;
+	margin: 0 auto;
+}
+
+.float{
+	float: left;
+	width: 400px;
+	height: 250px;
+	padding: 50px 0 0;
+}
+
+.content-anim{
+	position: relative;
+	float: right;
+	width: 300px;
+	height: 250px;
+	background: rgba(0,0,0,.3);
+	margin:10px 0;
+	overflow: hidden;
 }
 .container-1{
 	background:#badaff;
@@ -16,24 +47,6 @@ body{
 	top: 50%;
 }
 
-.bck-1{
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	background: #bada55;
-	z-index: -999;
-	transition: .5s;
-}
-.bck-2{
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	background: #22bbff;
-	transform:translate(100%,0);
-	z-index: -999;
-	transition: .5s;
-
-}
 .change{
 	transform:translate(100%,-50%);
 	opacity: 1;
@@ -60,10 +73,9 @@ body{
 	content: "";
 	position: absolute;
 	width: 100%;
-	left: -.09em;
+	left: -.05em;
 	transition:.4s;
 }
-
 .menu:after{top: .3em;}
 .menu:before{top: -.45em;}
 
@@ -71,6 +83,8 @@ body{
 	position: absolute;
 	width: 80px;
 	height: 80px;
+	top: 20%;
+	left: 20%;
 	transition:.4s;
 	background: rgba(0,0,0,.2);
 
@@ -98,7 +112,7 @@ body{
 
 .menu-1{
 	position: absolute;
-	top: 100px;
+	top: 0px;
 	line-height: 2em;
 	width: 150px;
 	background: rgba(0,0,0,.2);
@@ -132,7 +146,6 @@ body{
 .menu-1 li:nth-child(5){-webkit-transition-delay: .5s;}
 .menu-1 li:nth-child(6){-webkit-transition-delay: .6s;}
 
-
 .f{
 	background: #2288ff;
 	position: fixed;
@@ -140,8 +153,107 @@ body{
 	transition:.4s;
 	transform:translate(0,190%);
 }
+
 .f-on{
 	transition:.4s;
 	transform:translate(0,100%);
 	background: #2255aa;
+}
+
+.more{
+
+	position: absolute;
+	top: 100px;
+	left: 40%;
+	height: 50px;
+	width: 50px;
+	background: #ec8823;
+	border-radius: 50%;
+	transition:.5s;
+}
+.more:active{background: #eeaa88;transition:.5s;}
+
+.more:before,.more:after{
+	width: 50%;
+	position: absolute;
+	top: 45%;
+	left: 20%;
+	border: 3px white solid;
+	content: "";
+	transition:.5s;
+}
+
+.more:after{transform:rotate(90deg);}
+.switch:after{transform:rotate(135deg); transition:.5s;}
+.switch:before{transform:rotate(45deg); transition:.5s;}
+.more-li{
+	position: absolute;
+	opacity: 0;
+	bottom: 0px;
+	left: 5px;
+	border-radius: 100%;
+	transition:.5s;
+	background: rgba(0,0,0,.5);
+	width: 40px;
+	height: 40px;
+	z-index: -999;
+}
+.more-li--on{
+	opacity: 1;
+	transition:.5s;
+	transform:rotate(0deg);
+}
+
+.more-li--on:nth-child(1){transform:translate(-125%,-100%)}
+.more-li--on:nth-child(2){transform:translate(0%,-150%)}
+.more-li--on:nth-child(3){transform:translate(125%,-100%)}
+
+.field{
+	background: #eee;
+	width: 300px;
+	position: absolute;
+	top: 150px;
+	height: 50px;
+	line-height: 50px;
+	overflow: hidden;
+	transition:.5s;
+	text-align: center;
+}
+.field-on{text-indent:-100px;transition:.5s;}
+.field:after{
+	content:"Remove";
+	height: 50px;
+	width: 100px;
+	text-align: center;
+	transform:translate(100px,0);
+	top: 0;
+	right: 0;
+	position: absolute;
+	display: block;
+	transition:.5s;
+	color: white;
+	background: #ee0011;
+	text-indent:0;
+}
+.field-on:after{transform:translate(0,0);}
+.content{
+	background: #28f;
+	opacity: 0;
+	height: 150px;
+	width: 100%;
+	display: block;
+	transform: translate(0,-100%) scale(.1);
+	transition:.5s;
+	z-index: 99999;
+}
+.content-on{
+	opacity: 1;
+	transition:.5s;
+	transform: translate(0,0) scale(1);
+}
+#show-content{
+	position: absolute;
+	bottom: 50px;
+	z-index: 99;
+	transition:.5s;
 }
