@@ -1,0 +1,147 @@
+body{
+	background: white;
+}
+.container-1{
+	background:#badaff;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	text-align: center;
+	line-height: 50px;
+	opacity: 1;
+	transition: .5s;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	top: 50%;
+}
+
+.bck-1{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background: #bada55;
+	z-index: -999;
+	transition: .5s;
+}
+.bck-2{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background: #22bbff;
+	transform:translate(100%,0);
+	z-index: -999;
+	transition: .5s;
+
+}
+.change{
+	transform:translate(100%,-50%);
+	opacity: 1;
+	transition: .5s;
+	width: 50%;
+	height: 100%;	
+	border-radius: 0;
+
+}
+.menu{
+	width: 1.5em;
+	border:.1em white solid;
+	position: absolute;
+	transition:.5s;
+	height: 0;
+	width: 50%;
+	top: 50%;
+	left: 20%;
+}
+
+.menu:after,.menu:before
+{
+	border:.1em white solid;
+	content: "";
+	position: absolute;
+	width: 100%;
+	left: -.09em;
+	transition:.4s;
+}
+
+.menu:after{top: .3em;}
+.menu:before{top: -.45em;}
+
+.a-menu{
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	transition:.4s;
+	background: rgba(0,0,0,.2);
+
+}
+
+.menu-open .menu{
+	height: 50%;
+	border-radius: 100%;
+	transform: translate(0,-50%);
+	transition:.4s;
+}
+
+.menu-open .menu:after{
+	top: 50%;
+	width: 50%;
+	transform: translate(50%,0) rotate(135deg);
+	transition:.4s;
+}
+.menu-open .menu:before{
+	top: 50%;
+	width: 50%;
+	transform: translate(50%,0) rotate(-135deg);
+	transition:.4s;
+}
+
+.menu-1{
+	position: absolute;
+	top: 100px;
+	line-height: 2em;
+	width: 150px;
+	background: rgba(0,0,0,.2);
+	text-align: center;
+	transform:translate(-100%,0);
+	transition: .4s;
+	opacity: 0;
+}
+
+.menu-1 li
+{
+	opacity: 0;
+	transition: .4s;
+	transform:translate(-100%,0);
+	color: white;
+}
+.menu-on-1{
+	transform:translate(0,0);
+	transition: .4s;
+	opacity: 1;
+}
+.menu-on-1 li{
+	opacity: 1;
+	transform:translate(0,0);
+}
+
+.menu-1 li:nth-child(1){-webkit-transition-delay: .1s;}
+.menu-1 li:nth-child(2){-webkit-transition-delay: .2s;}
+.menu-1 li:nth-child(3){-webkit-transition-delay: .3s;}
+.menu-1 li:nth-child(4){-webkit-transition-delay: .4s;}
+.menu-1 li:nth-child(5){-webkit-transition-delay: .5s;}
+.menu-1 li:nth-child(6){-webkit-transition-delay: .6s;}
+
+
+.f{
+	background: #2288ff;
+	position: fixed;
+	height: 50%;
+	transition:.4s;
+	transform:translate(0,190%);
+}
+.f-on{
+	transition:.4s;
+	transform:translate(0,100%);
+	background: #2255aa;
+}

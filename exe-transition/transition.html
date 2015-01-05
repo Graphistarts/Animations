@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="css/main.css" type="text/css">
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+	<meta charset="UTF-8"/>
+</head>
+<body>
+<button class="a-menu"><div class="menu"></div></button>
+<nav class="menu-1">
+	<ul>
+		<li>TEXT 1</li>
+		<li>TEXT 2</li>
+		<li>TEXT 3</li>
+		<li>TEXT 4</li>
+		<li>TEXT 5</li>
+		<li>TEXT 6</li>
+	</ul>
+</nav>
+<button class="f"></button>
+<div class="bck-1"></div>
+<div class="bck-2"></div>
+<button id="bck">Change background</button>
+<div class="container-1" id="change"><a href="#">More</a></div>
+<script src="js/jquery-2.1.3.min.js"></script>
+<script>
+$(document).ready(function(){
+	var test= "";
+
+	$('.a-menu').on('click', function(){
+	$(this).toggleClass('menu-open');
+	$('.menu-1').toggleClass('menu-on-1');
+	});
+
+	$('#change').on('click', function(){
+	$('.container-1').toggleClass('change');
+	});
+
+	$('#bck').on('click', function(){
+	if(test == "")
+	{
+		$('.bck-1').css('transform','translate(-100%,0)');
+		$('.bck-2').css('transform','translate(0%,0)');
+	}
+
+	else
+	{
+		$('.bck-1').css('transform','translate(0,0)');
+		$('.bck-2').css('transform','translate(100%,0)');
+	}
+	test = !test;
+	});
+
+	$('.f').on('click', function(){
+	$(this).toggleClass('f-on');
+	});
+
+
+
+});
+</script>
+</body>
+</html>
